@@ -1,0 +1,329 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <title>Barakallahu Fi Umriki</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Poppins;
+      color: rgb(56, 56, 56);
+    }
+
+    body {
+      background: wheat;
+      background: linear-gradient(#ff71c0, #b983ff, #5aaeff);
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .open {
+      background-image: linear-gradient(#ff71c0, #b983ff);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      z-index: 1;
+      cursor: pointer;
+      transition: 0.5s all ease;
+    }
+
+    .open h2 {
+      margin-bottom: 26px;
+      color: rgb(56, 56, 56);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .open .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, .3);
+      text-align: center;
+    }
+
+    .open .card h3 {
+      margin-top: 20px;
+    }
+
+    .open .card img {
+      height: 100px;
+    }
+
+    .atas {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .atas img {
+      height: 200px;
+      margin-bottom: 50px;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    .atas h2 {
+      font-size: 1.5em;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    p {
+      display: block;
+      text-align: center;
+      color: rgb(56, 56, 56);
+      background: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 50px 30px;
+      margin: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    p.wm {
+      margin-top: 70px;
+      margin-bottom: 0;
+      padding-top: 30px;
+      padding-bottom: 25px;
+      border-radius: 20px 20px 0 0;
+      font-weight: 500;
+      font-size: 1.1em;
+      color: red;
+    }
+
+    p.wm a {
+      color: gray;
+      text-decoration: none;
+    }
+
+    .material-icons-sharp {
+      color: red;
+      font-size: 30px;
+      transform: translateY(5px);
+      animation: kenyal 2s ease infinite;
+      cursor: pointer;
+    }
+
+    @keyframes kenyal {
+      0% {
+        transform: scale(1) translateY(5px);
+      }
+
+      50% {
+        transform: scale(1.2) translateY(5px);
+      }
+
+      100% {
+        transform: scale(1) translateY(5px);
+      }
+    }
+
+    .star {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 10px yellow;
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+    }
+
+    .love {
+      position: absolute;
+      bottom: -50px;
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+      transform: rotate(-45deg);
+      animation: floatLove 4s ease-in-out infinite;
+    }
+
+    .love:before,
+    .love:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .love:before {
+      top: -25px;
+      left: 0;
+    }
+
+    .love:after {
+      left: 25px;
+      top: 0;
+    }
+
+    @keyframes floatLove {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+
+      50% {
+        transform: translateY(-300px) rotate(-45deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <audio class="audio" src="barakallahufiumrik.mp3" type="audio"
+    loop=""></audio>
+  <div class="open">
+    <div class="card">
+      <h2>Ada pesan buat kamu</h2>
+      <img onclick="mulai()" src="amplop-removebg-preview.png" alt="" srcset="" width="200" />
+      <h3>Tekan untuk membuka</h3>
+    </div>
+  </div>
+  <div class="atas" id="atas">
+    <img onclick="mulai()" src="mila.jpg" alt="inayatul amilah" />
+    <h2>Scroll kebawah ya</h2>
+  </div>
+  <p data-aos="fade-left">Wiihh Ada Yang Nambah Usia nih :)</p>
+  <p data-aos="fade-right">Barakallahu Fii Umrik Yaa..</p>
+  <p data-aos="zoom-in">Semoga Allah SWT senantiasa memberkahi usia, rezeki, dan kesehatanmu.</p>
+  <p data-aos="zoom-out">Semoga di usia yang baru ini, kamu semakin dekat dengan Allah, semakin bersemangat untuk
+    menebar kebaikan, dan semakin mudah dalam menjalani setiap ujian kehidupan. </p>
+  <p data-aos="fade-left">Ingatlah bahwa setiap tahun adalah anugerah untuk memperbaiki diri dan mendekatkan diri
+    kepada-Nya.</p>
+  <p data-aos="fade-right">Semoga semua doa yang kamu panjatkan dikabulkan, dan semua keinginan baikmu terwujud. Aamiin.
+  </p>
+
+  <p data-aos="zoom-in">Coba Pencet love nya hii
+    <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
+  </p>
+
+  <script>
+    var musik = "";
+  </script>
+  <script>
+    AOS.init({
+      duration: 900,
+    });
+  </script>
+  <script>
+    var audio = document.querySelector(".audio");
+    if (musik) {
+      audio.src = musik;
+    }
+
+    function mulai() {
+      audio.play();
+      document.querySelector(".open").style = "opacity: 0;";
+      document.querySelector(".body").style = "overflow-y: scroll;";
+      setTimeout(function () {
+        document.querySelector(".open").style.display = "none";
+      }, 1000);
+    }
+
+    function wa(isi) {
+      window.open(
+        "https://api.whatsapp.com/send?phone=6287778930142&text= Makasih ya udah inget ulang tahun aku, harapanku di hari spesial ini " +
+        isi);
+    }
+    async function tanya() {
+      var {
+        value: kado
+      } = await swal.fire({
+        title: "Di hari spesial ini apa harapan terbesar mu ?",
+        input: "text",
+        showCancelButton: false,
+      });
+      if (kado) {
+        await swal.fire("Kirim jawabannya ke wa aku ya");
+        wa(kado);
+      } else {
+        await swal.fire("Jangan dikosongin dong :(");
+        tanya();
+      }
+    }
+  </script>
+  <p class="wm"><span>@Inayatul Amilah</span></p>
+  <div id="star-container"></div>
+  <div id="love-container"></div>
+  <script>
+
+    function createStars() {
+      const container = document.getElementById('star-container');
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 2}s`;
+        container.appendChild(star);
+      }
+    }
+
+    function createLoves() {
+      const container = document.getElementById('love-container');
+      for (let i = 0; i < 15; i++) {
+        const love = document.createElement('div');
+        love.className = 'love';
+        love.style.left = `${Math.random() * 100}%`;
+        love.style.animationDelay = `${Math.random() * 4}s`;
+        container.appendChild(love);
+      }
+    }
+
+    window.onload = function () {
+      createStars();
+      createLoves();
+    };
+  </script>
+</body>
+
+</html>
